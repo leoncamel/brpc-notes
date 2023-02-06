@@ -10,6 +10,15 @@ As a core part of [braft](https://github.com/baidu/braft), `brpc` provides a hig
 wrap many RPC protocols, for example [gRPC](https://github.com/grpc/grpc), RDMA, thrift, and HTTP-RESTful like RPCs. See 
 [brpc overview](https://github.com/apache/brpc/blob/master/docs/en/overview.md) for more details.
 
+Project Structure:
+```text
+tree --charset=ascii -L 1 .
+
+.
+|-- README.md
+|-- brpc-grpc_c++    # cp brpc-grpc_c++ your_brpc_root_dir/example/grpc_c++
+`-- docs
+```
 
 ## Requirements
 
@@ -22,6 +31,11 @@ For our requirements, we focus on these points for `brpc + gRPC` combination:
 ## Short Reports
 
 ### Prepare brpc
+
+Interesting `grpc` tools in golang:
+- [evans: cli client](https://github.com/ktr0731/evans)
+- [ghz: benchmark](https://github.com/bojand/ghz)
+- [buf.build](https://docs.buf.build/introduction)
 
 ### brpc and cross language example
 
