@@ -27,6 +27,9 @@ For our requirements, we focus on these points for `brpc + gRPC` combination:
 - [ ] brpc使用gRPC跨语言交互的验证
 - [ ] brpc提供的C++库的梳理
 - [ ] brpc支持的编程模型（同步、异步、协程）
+- [X] brpc benchmark
+- [ ] `proto=3`
+- [ ] [grpc-java](https://github.com/grpc/grpc-java) vs [brpc-java aka starlight](https://github.com/baidu/starlight)
 
 ## Short Reports
 
@@ -45,9 +48,17 @@ See [brpc-cross-lang](./docs/01-cross-lang.md).
 
 See [brpc depedencies](./docs/02-depedencies.md).
 
-### brcp programming models
+### brpc programming models
 
-See [brpc internals](./docs/03-brpc-internals.md).
+See [brpc programming models](./docs/03-brpc-internals.md).
+
+### brpc benchmarks
+
+See [brpc benchmarks](./docs/04-benchmarks.md).
+
+### brpc/grpc in java
+
+See [brpc java](./docs/05-java.md).
 
 ## Reference
 
