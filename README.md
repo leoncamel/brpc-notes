@@ -52,5 +52,7 @@ See [brpc internals](./docs/03-brpc-internals.md).
 ## Reference
 
 - https://github.com/apache/brpc
+- https://github.com/apache/brpc/blob/master/docs/
 - https://github.com/baidu/braft
+- http://jinke.me/2018-09-14-coroutine-context-switch/
 
