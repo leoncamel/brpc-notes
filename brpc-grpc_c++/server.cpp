@@ -72,8 +72,13 @@ DEFINE_int32(port, 50051, "TCP Port of this server");
 DEFINE_int32(idle_timeout_s, -1, "Connection will be closed if there is no "
              "read/write operations during the last `idle_timeout_s'");
 DEFINE_bool(gzip, false, "compress body using gzip");
+DEFINE_int32(heavy_computation_count, 0, "Num of heavy computation iterations, default is 0 means no-operation.");
+DEFINE_int32(num_threads, 10, "Number of threads for bthread.");
 
 void heavy_computation(int n) {
+  if(n <= 0)
+    return;
+
   int running_total = 23;
   for (int i=0; i < n; i++) {
     running_total = 37 * running_total + i;
@@ -100,7 +105,9 @@ public:
         // std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
         // Method 2:
-        heavy_computation(10000000);
+        heavy_computation(FLAGS_heavy_computation_count);
+
+        // Method 3: blocking IO
 
         res->set_message("Hello " + req->name());
     }
@@ -126,7 +133,7 @@ int main(int argc, char* argv[]) {
 
     // Start the server.
     brpc::ServerOptions options;
-    options.num_threads = 4;
+    options.num_threads = FLAGS_num_threads;
     options.idle_timeout_sec = FLAGS_idle_timeout_s;
     if (server.Start(FLAGS_port, &options) != 0) {
         LOG(ERROR) << "Fail to start HttpServer";
