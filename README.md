@@ -4,7 +4,7 @@ Some Notes on [brpc](https://github.com/apache/brpc)
 
 This work investigate the [brpc library](https://github.com/apache/brpc) for **Next Generation DingoDB**.
 
-## Overviw
+## Overview
 
 As a core part of [braft](https://github.com/baidu/braft), `brpc` provides a high performance framework for inter-nodes communication. It 
 wrap many RPC protocols, for example [gRPC](https://github.com/grpc/grpc), RDMA, thrift, and HTTP-RESTful like RPCs. See 
