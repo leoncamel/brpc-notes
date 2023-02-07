@@ -28,7 +28,7 @@ For our requirements, we focus on these points for `brpc + gRPC` combination:
 - [ ] brpc提供的C++库的梳理
 - [ ] brpc支持的编程模型（同步、异步、协程）
 - [X] brpc benchmark
-- [ ] `proto=3`
+- [X] `proto=3`
 - [ ] [grpc-java](https://github.com/grpc/grpc-java) vs [brpc-java aka starlight](https://github.com/baidu/starlight)
 
 ## Short Reports
@@ -59,6 +59,14 @@ See [brpc benchmarks](./docs/04-benchmarks.md).
 ### brpc/grpc in java
 
 See [brpc java](./docs/05-java.md).
+
+### `proto3`
+
+In the simple `grpc_c++` example, `proto3` works fine.
+
+Difference between `proto2` and `proto3`:
+
+- [proto2 vs proto3](https://www.hackingnote.com/en/versus/proto2-vs-proto3/index.html)
 
 ## Reference
 
