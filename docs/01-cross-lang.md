@@ -1,4 +1,10 @@
 
+## TODOs
+
+- [ ] Explain in protocol(in theory)
+- [ ] Capture an example by wireshark(Unary, Stream, Max Streams, Huge message size, etc)
+- [ ] Explain in Code(brpc server vs grpc server)
+
 ## brpc server
 
 ```
@@ -49,4 +55,9 @@ evans: deprecated usage, please use sub-commands. see `evans -h` for more detail
 See [ghz](https://github.com/bojand/ghz)
 
 Benchmark results at [03-brpc-internals.md](./03-brpc-internals.md).
+
+## References
+
+- (grpc PROTOCOL-HTTP2)[https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md]
+- (RFC-7540)[https://www.rfc-editor.org/rfc/rfc7540]
 
